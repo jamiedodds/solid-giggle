@@ -1,19 +1,22 @@
 import React, { Component } from 'react';
+import {Link} from 'react-router-dom';
 
 class Header extends Component {
 	render() {
 	  return (
 	    <header>
 	    	<div className="logo">
-	    	<h1>LOGO</h1>
+	    		<h1>LOGO</h1>
 	    	</div>
 	    
 
 		    <nav>
 		    	<ul>
-		    		<li><a href="#">Home</a></li>
-		    		<li><a href="#">Products</a></li>
-		    		<li><a href="#">Contact</a></li>
+		    		<li className="first"><Link to="/">Home</Link></li>
+		    		
+		    		<li><Link to="/Project">Projects</Link></li>
+
+		    		<li className="last"><Link to="/Contact">Contact</Link></li>
 		    	</ul>
 		    </nav>
 	    </header>
